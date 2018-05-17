@@ -38,7 +38,7 @@ public class UserEjb implements UserEjbLocal {
     }
 
     @Override
-    public Utente eseguiLogin(String email, String password) {
+    public UtenteBean eseguiLogin(String email, String password) {
      
         TypedQuery<Utente> utenti = 
                 em.createNamedQuery("Utente.findByEmail", Utente.class)
@@ -50,7 +50,12 @@ public class UserEjb implements UserEjbLocal {
             String passwordHash = DigestUtils.sha256Hex(password + u.getSale()); 
             
             if(u.getPassword().equals(passwordHash)){
-                return u;
+                UtenteBean uBean = new UtenteBean( 
+                        u.getEmail(), u.getNome(), u.getCognome(), u.getPassword(), 
+                        u.getCf(), u.getDatanascita(), u.getSesso().toString() 
+                );
+                uBean.setId(u.getId());
+                return uBean;
             }
             
         }

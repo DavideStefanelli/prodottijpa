@@ -1,7 +1,7 @@
 package servlet;
 
+import beans.UtenteBean;
 import ejbs.UserEjbLocal;
-import entities.Utente;
 import java.io.IOException;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
@@ -28,7 +28,7 @@ public class UserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         if (action.equals("login")) {
-            Utente utente = userEjb.eseguiLogin(request.getParameter("email"), request.getParameter("password"));
+            UtenteBean utente = userEjb.eseguiLogin(request.getParameter("email"), request.getParameter("password"));
             if (utente != null) {
                 HttpSession sessione = request.getSession();
                 sessione.setAttribute("utente", utente);

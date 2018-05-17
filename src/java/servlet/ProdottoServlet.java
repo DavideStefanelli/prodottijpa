@@ -42,11 +42,10 @@ public class ProdottoServlet extends HttpServlet {
         );
         int idCat = Integer.parseInt(request.getParameter("catId"));
         boolean success = prodottiEjb.aggiungiProdotto(p, idCat);
-
         if (success) {
-            response.sendRedirect("index.html");
+            response.sendRedirect("index.jsp");
         } else {
-            response.sendRedirect("errore500.html");
+            response.sendRedirect("error.jsp");
         }
 
     }

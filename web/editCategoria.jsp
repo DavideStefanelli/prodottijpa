@@ -34,7 +34,7 @@
                 
             </form>
             <br/>
-            <a href="index.html">Indietro</a>
+            <a href="index.jsp">Indietro</a>
         </div>
         
     <script src="js/bootstrap.min.js"></script>    

@@ -7,7 +7,7 @@ import javax.ejb.Local;
 @Local
 public interface UserEjbLocal {
     
-    public Utente eseguiLogin(String email, String password);
+    public UtenteBean eseguiLogin(String email, String password);
     public boolean registraUtente(UtenteBean utente);
     
 }

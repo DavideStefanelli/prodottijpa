@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class UtenteBean {
     
+    private int id;
     String email;
     String nome;
     String cognome;
@@ -11,6 +12,7 @@ public class UtenteBean {
     String cf;
     Date datanascita;
     String sesso;
+    
 
     public UtenteBean(String email, String nome, String cognome, String password, String cf, Date datanascita, String sesso) {
         this.email = email;
@@ -22,7 +24,6 @@ public class UtenteBean {
         this.sesso = sesso;
     }
     
-
     public String getEmail() {
         return email;
     }
@@ -78,6 +79,15 @@ public class UtenteBean {
     public void setSesso(String sesso) {
         this.sesso = sesso;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     
     
     

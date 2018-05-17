@@ -30,10 +30,10 @@
         <div class="container">
             <form class="form-signin" method="post" action="editprodotto">
 
-                <label for="nomeProd">Nome prodotto</label>
+                <label for="nomeProd">Nome</label>
                 <input type="text" id="nomeProd" class="form-control" name="nomeProd" placeholder="Nome prodotto" required>
 
-                <label for="descrizioneProd">Nome prodotto</label>
+                <label for="descrizioneProd">Descrizione</label>
                 <textarea rows="3" id="descrizioneProd" class="form-control" name="descrizioneProd" placeholder="Descrizione prodotto" required></textarea>
 
                 <div class="form-group">
@@ -53,7 +53,7 @@
 
             </form>
             <br/>
-            <a href="index.html">Indietro</a>
+            <a href="index.jsp">Indietro</a>
         </div>
         <script src="js/bootstrap.min.js"></script>    
     </body>

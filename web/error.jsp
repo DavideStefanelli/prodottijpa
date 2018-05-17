@@ -1,9 +1,14 @@
+
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
+<%
+    String errorMsg = "Errore sconosciuto";
+    if(session.getAttribute("errMsg") != null){
+        errorMsg = (String)session.getAttribute("errMsg");
+    }
+%>
 <html>
     <head>
         <title>Errore 500</title>
@@ -23,7 +28,7 @@ and open the template in the editor.
                         <h2>
                             Errore 500</h2>
                         <div class="error-details">
-                            Si è verificato un errore interno del server.
+                            Si è verificato un errore interno del server: <%= errorMsg %>
                         </div>
                         <div class="error-actions">
                             <a href="/ProdottiJpa/" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span> Torna indietro </a>

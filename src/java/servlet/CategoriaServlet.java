@@ -25,9 +25,9 @@ public class CategoriaServlet extends HttpServlet {
         boolean success = prodottiEjb.aggiungiCategoria(c);
         
         if(success) {
-            response.sendRedirect("index.html");
+            response.sendRedirect("index.jsp");
         } else {
-            response.sendRedirect("errore500.html");
+            response.sendRedirect("error.jsp");
         }
         
     }
